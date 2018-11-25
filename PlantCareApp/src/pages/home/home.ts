@@ -13,11 +13,12 @@ export class HomePage {
     this.moistureValue = 25;
   }
 
-  getData() {
+  getData(refresher: Refresher) {
     var url = 'http://localhost:8000/get_data/';
     this.httpClient.get(url).subscribe(data => {
       this.moistureValue = data;
     });
+    refresher.complete();
   }
 
 }

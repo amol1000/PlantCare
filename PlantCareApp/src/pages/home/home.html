@@ -7,7 +7,11 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card (click)="getData()">
+  <ion-refresher (ionRefresh)="getData($event)" >
+    <ion-refresher-content pullingText="Pull to refresh..."
+refreshingText="Refreshing..." refreshingSpinner="circles"></ion-refresher-content>
+  </ion-refresher>
+  <ion-card>
 
   <ion-card-header>
     Plant 1
