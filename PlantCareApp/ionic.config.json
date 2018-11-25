@@ -1,0 +1,7 @@
+{
+  "name": "PlantCareApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
